@@ -1,0 +1,40 @@
+%banner-btn {
+  padding: 14px 54px 14px 54px;
+  border-radius: 4px;
+  background-color: $color-yellow;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: $color-primary-black;
+  font-size: 18px;
+  letter-spacing: 1px;
+  transition: 0.5s ease-in-out;
+  z-index: 9;
+  &:hover {
+    background: $color-primary-black;
+    color: $color-accent-white;
+  }
+}
+
+%taste-btn {
+  padding: 17px 70px 17px 76px;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  background-color: $color-yellow;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  color: $color-primary-black;
+  font-size: 23.5px;
+  transition: 0.5s ease-in-out;
+  @include breakpoint(extrasmall) {
+    padding: 17px 45px 17px 45px;
+  }
+  @include breakpoint(iPhone5) {
+    padding: 22px 40px;
+  }
+  &:hover {
+    color: $color-accent-white;
+    background: $color-primary-black;
+  }
+}

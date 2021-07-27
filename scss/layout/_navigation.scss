@@ -1,0 +1,218 @@
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 40px 60px;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 99999;
+  @include breakpoint(medium) {
+    padding: 20px 15px;
+  }
+  .logo {
+    z-index: 99999;
+  }
+  ul {
+    li {
+      margin-right: 58px;
+      float: left;
+      a {
+        display: inline-block;
+        text-transform: capitalize;
+        letter-spacing: 0.21px;
+        transition: 0.5s ease-in-out;
+        position: relative;
+        &:hover {
+          color: $color-yellow;
+        }
+        &:after {
+          @include line-animation();
+        }
+        &:hover:after {
+          @include line-animation-hover();
+        }
+      }
+      &:nth-child(6n + 5) {
+        margin-right: 75px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // &.active_sticky {
+  //   background: $color-gray;
+  //   z-index: 9999999;
+  //   position: fixed;
+  //   width: 100%;
+  //   top: 0;
+  //   transition: 0.5s ease;
+  //   @include breakpoint(medium) {
+  //     padding-left: 15px;
+  //   }
+  // }
+  // &.nav-up {
+  //   top: -200px;
+  // }
+}
+
+// Media Query
+@include breakpoint(wide) {
+  .menu-toggle {
+    position: absolute;
+    right: 58px;
+    cursor: pointer;
+    z-index: 99;
+    @include breakpoint(medium) {
+      right: 15px;
+    }
+  }
+  .menu-toggle span {
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: $color-yellow;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  .active-responsive-menu span:nth-child(1) {
+    transform: rotate(135deg);
+    position: absolute;
+    top: 0;
+  }
+  .active-responsive-menu span:nth-child(2) {
+    display: none;
+  }
+  .active-responsive-menu span:nth-child(3) {
+    transform: rotate(-135deg);
+  }
+  .active-responsive-menu {
+    overflow: hidden;
+  }
+  .logo {
+    z-index: 99999;
+  }
+  nav {
+    background-color: $color-gray;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header-wrapper {
+    ul {
+      li {
+        margin-left: 0;
+        a {
+          padding: 0;
+        }
+        a:after {
+          margin-left: 0;
+        }
+      }
+      li:last-child {
+        margin-left: 0;
+        display: none;
+      }
+    }
+  }
+  .active-responsive-menu nav {
+    position: fixed;
+    right: 0%;
+    opacity: 1;
+    width: 100%;
+    visibility: visible;
+    z-index: 9;
+    transition: 0.5s ease-in-out;
+  }
+  .active-responsive-menu nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 15px;
+  }
+  .active-responsive-menu nav ul li {
+    display: block;
+    padding: 50px 0 0 0;
+    transition: 1s ease;
+    margin-right: 0;
+    @include breakpoint(extrasmall) {
+      padding: 20px 0 0 0;
+    }
+    &:nth-child(6n + 5) {
+      margin-right: 0;
+    }
+  }
+
+  .active-responsive-menu .banner-text {
+    a {
+      z-index: 1;
+    }
+  }
+
+  .active-responsive-menu nav ul :nth-child(1) {
+    transition-delay: 0.2s;
+  }
+  .active-responsive-menu nav ul :nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  .active-responsive-menu nav ul :nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  .active-responsive-menu nav ul :nth-child(4) {
+    transition-delay: 0.5s;
+  }
+  .active-responsive-menu nav ul :nth-child(5) {
+    transition-delay: 0.6s;
+  }
+}
+
+//magnefic popup form
+.google-logo {
+  padding: 20px 0;
+}
+.google-search {
+  padding: 20px 10px;
+}
+.google-search:focus {
+  box-shadow: silver 0 2px 10px;
+  border-color: silver;
+}
+.google-form .btn-group {
+  padding: 20px 0;
+}
+.btn-group > .btn {
+  border-radius: 0;
+  margin: 0 10px;
+}
+.btn {
+  background-color: $color-gray;
+  color: $color-accent-white;
+  font-weight: 900;
+  transition: 0.5s ease;
+  &:hover {
+    background: $color-accent-white;
+    color: $color-gray;
+  }
+}
+.white-popup {
+  position: relative;
+  background: $color-yellow;
+  padding: 100px 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+.popup-form {
+  width: 100%;
+}

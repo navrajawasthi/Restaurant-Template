@@ -1,0 +1,172 @@
+//footer
+
+.footer-wrapper {
+    position: relative;
+    background: $color-gray;
+    padding: 254px 90px 298px;
+    color: $color-accent-white;
+    @include breakpoint(wide) {
+        padding: 100px 15px;
+    }
+
+    .footer-section {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        @include breakpoint(wide) {
+            flex-direction: column;
+        }
+        h5 {
+            margin-bottom: 38px;
+            font-size: 25px;
+            @include breakpoint(medium) {
+                margin-bottom: 0;
+            }
+            @include breakpoint(extrasmall) {
+                font-size: 18px;
+            }
+        }
+        p {
+            width: 455px;
+            max-width: 100%;
+            word-break: break-all;
+            font-size: 23.5px;
+            line-height: 1.2;
+            margin-bottom: 36px;
+            letter-spacing: 0.2px;
+            @include breakpoint(smaller) {
+                width: 100%;
+            }
+            @include breakpoint(extrasmall) {
+                font-size: 16px;
+            }
+        }
+        .footer-title {
+            h5 {
+                width: 457px;
+                max-width: 100%;
+                padding-bottom: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 25px;
+                margin-bottom: 0;
+                @include breakpoint(wide) {
+                    padding-bottom: 20px;
+                }
+                @include breakpoint(extrasmall) {
+                    width: 100%;
+                    font-size: 18px;
+                }
+            }
+        }
+        .social-icon {
+            .fa {
+                font-size: 25px;
+                color: $color-gray;
+                background-color: $color-accent-white;
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                padding-top: 12px;
+                cursor: pointer;
+                text-align: center;
+                margin-right: 10px;
+                transition: 0.5s ease-in-out;
+            }
+            .fa:hover {
+                background: $color-yellow;
+                color: $color-accent-white;
+            }
+        }
+        .footer-link-section {
+            margin-left: 168px;
+            @include breakpoint(wide) {
+                margin-left: 0;
+                margin-top: 50px;
+            }
+            h5 {
+                margin-bottom: 30px;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 25px;
+                @include breakpoint(wide) {
+                    margin-bottom: 20px;
+                }
+                @include breakpoint(extrasmall) {
+                    font-size: 18px;
+                }
+            }
+            @include breakpoint(medium) {
+                margin-left: 0;
+                :nth-child(1) {
+                    margin-top: 24px;
+                }
+            }
+            &:nth-child(3) {
+                margin-left: 25px;
+                @include breakpoint(wide) {
+                    margin-left: 0;
+                }
+            }
+            &:nth-child(4) {
+                margin-left: 22px;
+                @media (max-width: 1366px) {
+                    margin-left: 0;
+                    margin-top: 50px;
+                }
+                @include breakpoint(wide) {
+                    margin-left: 0;
+                }
+            }
+            li {
+                margin-bottom: 18px;
+                @include breakpoint(medium) {
+                    margin-bottom: 15px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            a {
+                font-size: 25px;
+                color: $color-accent-white;
+                line-height: 0;
+                transition: 0.5s ease-in-out;
+                @include breakpoint(extrasmall) {
+                    font-size: 16px;
+                }
+            }
+            a:hover {
+                color: $color-yellow;
+            }
+        }
+    }
+    .back-top-arrow {
+        position: relative;
+        opacity: 0;
+        visibility: hidden;
+        background-color: $color-yellow;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        width: 80px;
+        height: 80px;
+        z-index: 99999;
+        @include breakpoint(small) {
+            width: 50px;
+            height: 50px;
+        }
+        a {
+            font-size: 30px;
+            color: white;
+
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+}
